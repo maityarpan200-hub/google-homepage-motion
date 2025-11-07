@@ -1,0 +1,241 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  transition: background 1s ease-in-out, background-image 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Gradient Motion Keyframes */
+@keyframes gradientMotion {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 20px;
+}
+
+.top-bar a {
+  color: rgb(180, 14, 196);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.top-bar a:hover { text-decoration: underline; }
+
+.profile {
+  width: 32px;
+  height: 32px;
+  background: url("https://i.pravatar.cc/100") no-repeat center center/cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Logo Multicolor */
+.logo {
+  font-size: 92px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  margin-bottom: 25px;
+}
+.logo .blue { color: #4285f4; }
+.logo .red { color: #ea4335; }
+.logo .yellow { color: #fbbc05; }
+.logo .green { color: #34a853; }
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(148, 30, 30, 0.9);
+  border-radius: 50px;
+  width: 550px;
+  max-width: 90%;
+  padding: 8px 20px;
+  box-shadow: 0 2px 10px rgb(49, 45, 45);
+  transition: all 0.2s ease;
+}
+
+.search-box:hover {
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.search-box .search-icon,
+.search-box .mic-icon {
+  opacity: 0.6;
+}
+
+.search-box .search-icon { margin-right: 10px; }
+.search-box .mic-icon { margin-left: 10px; }
+
+/* Buttons */
+.buttons { margin-top: 25px; }
+
+.buttons button {
+  background: rgba(238, 238, 236, 0.9);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.buttons button:hover {
+  background: rgb(235, 238, 57);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  opacity: 0.8;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* Gmail Login Popup */
+.login-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-box {
+  background: rgba(60, 0, 70, 0.9);
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #f7f7f7;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.input-group { margin-bottom: 15px; }
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 200, 255, 0.4);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #ff6af1;
+}
+
+.login-box button {
+  width: 100%;
+  background: linear-gradient(90deg, #e52e71, #9b00ff);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+}
+
+.forgot { margin-top: 10px; font-size: 13px; }
+
+.bottom-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #e7c7ff;
+}
+
+.login-box a { color: #ff6af1; text-decoration: none; }
+.login-box a:hover { text-decoration: underline; }
+
+.login-box .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ff99f9;
+  transition: transform 0.2s;
+}
+
+.login-box .close:hover { transform: scale(1.2); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

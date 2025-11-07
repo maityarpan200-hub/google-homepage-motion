@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Gmail Login Popup -->
+<div class="login-popup" id="loginPopup">
+  <div class="login-box">
+    <h2>Sign in</h2>
+    <form>
+      <div class="input-group">
+        <input type="email" placeholder="Email or phone" required />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Enter your password" required />
+      </div>
+      <button type="submit">Next</button>
+      <p class="forgot"><a href="#">Forgot email?</a></p>
+    </form>
+    <div class="bottom-text">
+      Not your computer? Use Guest mode to sign in privately.<br />
+      <a href="#">Learn more</a>
+    </div>
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+</div>
+
+<body>
+
+  <!-- Top Navigation -->
+  <div class="top-bar">
+    <a href="#" onclick="openPopup()">Gmail</a>
+    <a href="#">Images</a>
+    <div class="profile"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1 class="logo">
+      <span class="blue">G</span>
+      <span class="red">o</span>
+      <span class="yellow">o</span>
+      <span class="blue">g</span>
+      <span class="green">l</span>
+      <span class="red">e</span>
+    </h1>
+
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <div class="search-box">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" class="search-icon" alt="search">
+        <input type="text" name="q" placeholder="Search Google or type a URL" required />
+        <img src="https://img.icons8.com/ios-glyphs/24/000000/microphone.png" class="mic-icon" alt="mic">
+      </div>
+      <div class="buttons">
+        <button type="submit">Google Search</button>
+        <button type="button" onclick="window.location.href='https://www.google.com/doodles'">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <a href="#">About</a>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">How Search works</a>
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </footer>
+
+  <!-- Gmail Popup Script -->
+  <script>
+    function openPopup() {
+      document.getElementById('loginPopup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('loginPopup').style.display = 'none';
+    }
+  </script>
+
+  <!-- Motion Script -->
+  <script src="motion.js"></script>
+</body>
+</html>
